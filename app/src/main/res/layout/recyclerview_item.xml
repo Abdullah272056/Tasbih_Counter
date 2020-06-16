@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@drawable/recyclerview_item_background"
+    android:layout_marginTop="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:weightSum="5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/zikirNameTextViewId"
+                android:padding="5dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:text="Zikir Name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+            <TextView
+                android:id="@+id/dateTextViewId"
+                android:padding="5dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="14/06/2000"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="2dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/counterValueTextViewId"
+                android:textStyle="bold"
+                android:textColor="#FDFCFC"
+                android:background="@drawable/button_background"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:text="6"
+                android:layout_width="65dp"
+                android:layout_height="65dp"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/menuImageViewId"
+            android:padding="10dp"
+            android:src="@drawable/ic_menu_black_24dp"
+            android:layout_margin="3dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+   
+</LinearLayout>

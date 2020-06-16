@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#222"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:textColor="#E91E63"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tasbeeh Counter"
+       />
+
+    <TextView
+        android:textColor="#E91E63"
+        android:id="@+id/counterTextViewId"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:padding="15dp"
+        android:textSize="50sp"
+        android:text="00000"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/text_view_background"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+
+        <ImageView
+            android:id="@+id/backButtonId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:padding="10dp"
+            android:src="@drawable/backup"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3" />
+        <Button
+            android:id="@+id/resetButtonId"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:padding="5dp"
+            android:text="Reset"
+            android:textColor="#F80303" />
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/counterButtonId"
+        android:textColor="#B5023F"
+        android:textSize="100sp"
+        android:text="+"
+        android:background="@drawable/button_background"
+        android:layout_marginTop="15dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+    <LinearLayout
+        android:weightSum="4"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/saveButtonId"
+            android:text="Save"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/displayButtonId"
+            android:text="Display Data"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

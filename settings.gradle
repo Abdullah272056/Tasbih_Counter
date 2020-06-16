@@ -1,0 +1,2 @@
+rootProject.name='Tasbih Counter'
+include ':app'
