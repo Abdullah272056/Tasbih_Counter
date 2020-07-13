@@ -5,6 +5,23 @@ public class Note {
     String zikirName,time;
           int  countValue;
 
+    public Note(int countValue) {
+        this.countValue = countValue;
+    }
+
+    public Note(int id, int countValue) {
+        this.id = id;
+        this.countValue = countValue;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public Note(int id, String zikirName, String time, int countValue) {
         this.id = id;
         this.zikirName = zikirName;

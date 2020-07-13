@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Setting"
+        android:id="@+id/settingItemId"/>
+    <item android:title="Contact Us"
+        android:id="@+id/contactItemId"/>
+    <item android:title="About"
+        android:id="@+id/aboutItemId"/>
+    <item android:title="Cancel"
+        android:id="@+id/cancelItemId"/>
+</menu>

@@ -61,4 +61,20 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         }
         return dataList;
     }
+
+    public int deleteData(int id){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        int status = sqLiteDatabase.delete(Constants.TABLE_NAME,"id=?",new String[]{String.valueOf(id)});
+        return status;
+
+    }
+
+    public int updateData(Note note){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+       // contentValues.put(Constants.COLUMN_ZIKIR_NAME,note.getZikirName ());
+        contentValues.put(Constants.COLUMN_ZIKIR_COUNT_VALUE,note.getCountValue ());
+        int status = sqLiteDatabase.update(Constants.TABLE_NAME,contentValues," id=? ",new String[]{String.valueOf(note.getId())});
+        return status;
+    }
 }

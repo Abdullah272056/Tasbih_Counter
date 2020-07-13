@@ -2,7 +2,7 @@ package com.example.tasbihcounter;
 
 public class Constants {
     public  static final String DATABASE_NAME="ZikirInformation.db";
-    public  static final int DATABASE_Version=4;
+    public  static final int DATABASE_Version=1;
     public  static final String TABLE_NAME="ZikirInformation";
     public  static final String COLUMN_ID="id";
     public  static final String COLUMN_ZIKIR_NAME="ZikirName";
@@ -15,5 +15,4 @@ public class Constants {
             +COLUMN_DATE+" TEXT, "
             +COLUMN_ZIKIR_COUNT_VALUE+" INTEGER "
             +")";
-
 }

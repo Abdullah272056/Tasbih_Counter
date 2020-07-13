@@ -1,6 +1,8 @@
 package com.example.tasbihcounter;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +38,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         holder.zikirNameTextView.setText(allNote.get(position).getZikirName ());
         holder.dateTextView.setText(allNote.get(position).getTime ());
         holder.countValueTextView.setText(String.valueOf (allNote.get(position).getCountValue ()));
@@ -53,30 +55,45 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                 final androidx.appcompat.app.AlertDialog alertDialog = builder.create();
                 Toast.makeText (context, "Clicked", Toast.LENGTH_SHORT).show ();
 
-
                 TextView updateTextView=view.findViewById(R.id.updateTextViewId);
                 TextView deleteTextView=view.findViewById(R.id.deleteTextViewId);
                 TextView cancelTextView=view.findViewById(R.id.cancelTextViewId);
 
-                updateTextView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                       // customDialog(position);
-                        alertDialog.dismiss();
-
-                    }
-                });
+//                updateTextView.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                       // customDialog(position);
+//                        alertDialog.dismiss();
+//
+//                    }
+//                });
 
                 deleteTextView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-//                        int status = databaseHelper.deleteData(allNotes.get(position).getId());
-//                        if (status == 1){
-//                            allNotes.remove(allNotes.get(position));
-//                            alertDialog.dismiss();
-//                            notifyDataSetChanged();
-//                        }else {
-//                        }
+                        int status = databaseHelper.deleteData(allNote.get(position).getId());
+                        if (status == 1){
+                            allNote.remove(allNote.get(position));
+                            alertDialog.dismiss();
+                            notifyDataSetChanged();
+                        }else {
+
+                        }
+                    }
+                });
+                updateTextView.setOnClickListener (new View.OnClickListener () {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText (context, "Update clicked", Toast.LENGTH_SHORT).show ();
+                        Intent intent=new Intent (context,MainActivity.class);
+                       // Toast.makeText (context, String.valueOf (allNote.get (position).getCountValue ()), Toast.LENGTH_SHORT).show ();
+                        intent.putExtra ("countValue",String.valueOf (allNote.get (position).getCountValue ()));
+                        intent.putExtra ("id",allNote.get (position).getId ());
+                        context.startActivity (intent);
+
+
+                       ((Activity)context).finish ();
+
                     }
                 });
 
@@ -84,7 +101,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                     @Override
                     public void onClick(View v) {
                         alertDialog.dismiss();
-
                     }
                 });
 
@@ -109,8 +125,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
            dateTextView= itemView.findViewById(R.id.dateTextViewId);
             countValueTextView= itemView.findViewById(R.id.counterValueTextViewId);
             menuImageView= itemView.findViewById(R.id.menuImageViewId);
-
-
         }
     }
 }
