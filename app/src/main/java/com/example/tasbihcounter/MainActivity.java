@@ -295,28 +295,5 @@ public class MainActivity extends AppCompatActivity {
     }
     
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater ().inflate (R.menu.menu,menu);
-//        return super.onCreateOptionsMenu (menu);
-//    }
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        int id=item.getItemId ();
-//        switch (id){
-//            case R.id.settingItemId:
-//                Toast.makeText (this, "Setting Clicked", Toast.LENGTH_SHORT).show ();
-//            case R.id.aboutItemId:
-//                Toast.makeText (this, "This is tashbeeh counter app.\n It is making for tasbeeh counting", Toast.LENGTH_SHORT).show ();
 //
-//            case R.id.cancelItemId:
-//
-//
-//            case R.id.contactItemId:
-//                Toast.makeText (this, "My name is Abdullah.\n I am  an Android Developer. \n My phone number is 01994215664.  ", Toast.LENGTH_SHORT).show ();
-//
-//        }
-//        return super.onOptionsItemSelected (item);
-//    }
 }
